@@ -17,6 +17,9 @@ app.get("/build/js/web3.min.js", (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client/build/js', 'web3.min.js'));
 });
 
+app.get("/very-secret-message", (req, res) => {
+    res.json({message:"Secret Message : " + process.env.SECRET_MESSAGE});
+});
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'index.html'));
