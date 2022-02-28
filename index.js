@@ -2,11 +2,11 @@
 const path = require('path');
 const express = require("express");
 require('dotenv').config()
-//http://127.0.0.1:8545/
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(express.json());
-//var cors = require('cors');
+
 
 
 app.get("/build/js/app.js", (req, res) => {
